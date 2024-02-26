@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Assessment</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<style>
+  #top-right-div {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="row justify-content-center" style="height:100vh;">
+      <div class="col-md-8">
+        <div class="mt-5 ">
+          <h1 class="text-center pt-3">WEB DEVELOPMENT TEST</h1>
+        </div>
+        <div class="mt-5"></div>
+        <div id="question-container" class="border rounded p-4 shadow"></div>
+        <button id="prev-btn" onclick="prevQuestion()" class="btn btn-warning mt-4 rounded-pill">Previous</button>
+        <button id="next-btn" onclick="nextQuestion()" class="btn btn-primary mt-4 rounded-pill">Next</button>
+        <button id="submit-btn" onclick="submitTest()" class="btn btn-success mt-4 rounded-pill">Submit</button>
+        <div id="result-container" class=""></div>
+      </div>
+    </div>
+  </div>
+  <div id="result-container" class=""></div>
+  <div id="top-right-div">
+    <h5>Time Left</h5>
+    <h5 id="timer"></h5>
+  </div>
+  
+</body>
+<script src="questions.js"></script>
+</html>
